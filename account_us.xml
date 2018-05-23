@@ -1,0 +1,13 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data>
+        <record model="account.account.template" id="2230_UT">
+            <field name="name">Sales tax collected—UT</field>
+            <field name="code">2230-UT</field>
+            <field name="type" ref="account_us.tax_liabilities"/>
+            <field name="deferral" eval="True"/>
+            <field name="kind">other</field>
+            <field name="parent" ref="account_us.2230"/>
+        </record>
+    </data>
+</tryton>
