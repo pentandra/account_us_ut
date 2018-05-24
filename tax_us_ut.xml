@@ -117,6 +117,62 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
+        <record model="account.tax.template" id="sut_use_non_food_cellular_equipment">
+            <field name="name">Use-tax purchases of cellular equipment</field>
+            <field name="description">Use tax 6.6%</field>
+            <field name="group" ref="group_sut_use_non_food"/>
+            <field name="type">none</field>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_use_non_food_cellular_equipment_1">
+            <field name="name">Use-tax purchases of cellular equipment (1)</field>
+            <field name="description">Use tax 6.6% (1)</field>
+            <field name="parent" ref="sut_use_non_food_cellular_equipment"/>
+            <field name="rate" eval="Decimal('.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="account_us.54221"/>
+            <field name="credit_note_account" ref="account_us.54221"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_use_non_food_cellular_equipment_2">
+            <field name="name">Use-tax purchases of cellular equipment (2)</field>
+            <field name="description">Use tax 6.6% (2)</field>
+            <field name="parent" ref="sut_use_non_food_cellular_equipment"/>
+            <field name="rate" eval="Decimal('-.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2231_UT"/>
+            <field name="credit_note_account" ref="2231_UT"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
+        <record model="account.tax.template" id="sut_use_non_food_personal_computing_devices">
+            <field name="name">Use-tax purchases of personal computing devices</field>
+            <field name="description">Use tax 6.6%</field>
+            <field name="group" ref="group_sut_use_non_food"/>
+            <field name="type">none</field>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_use_non_food_personal_computing_devices_1">
+            <field name="name">Use-tax purchases of personal computing devices (1)</field>
+            <field name="description">Use tax 6.6% (1)</field>
+            <field name="parent" ref="sut_use_non_food_personal_computing_devices"/>
+            <field name="rate" eval="Decimal('.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="account_us.543011"/>
+            <field name="credit_note_account" ref="account_us.543011"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_use_non_food_personal_computing_devices_2">
+            <field name="name">Use-tax purchases of personal computing devices (2)</field>
+            <field name="description">Use tax 6.6% (2)</field>
+            <field name="parent" ref="sut_use_non_food_personal_computing_devices"/>
+            <field name="rate" eval="Decimal('-.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2231_UT"/>
+            <field name="credit_note_account" ref="2231_UT"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
         <record model="account.tax.template" id="sut_sales_single_non_food_and_prepared_food">
             <field name="name">Utah tax on sales of non-food and prepared food</field>
             <field name="description">Sales tax 6.6%</field>
@@ -245,6 +301,34 @@ this repository contains the full copyright notices and license terms. -->
           <field name="amount">tax</field>
           <field name="type">credit</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_use_non_food_cellular_equipment_1_1">
+          <field name="code" ref="tax_code_8a"/>
+          <field name="tax" ref="sut_use_non_food_cellular_equipment_1"/>
+          <field name="operator">+</field>
+          <field name="amount">tax</field>
+          <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_use_non_food_cellular_equipment_1_2">
+          <field name="code" ref="tax_code_8a"/>
+          <field name="tax" ref="sut_use_non_food_cellular_equipment_1"/>
+          <field name="operator">-</field>
+          <field name="amount">tax</field>
+          <field name="type">credit</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_use_non_food_personal_computing_devices_1_1">
+          <field name="code" ref="tax_code_8a"/>
+          <field name="tax" ref="sut_use_non_food_personal_computing_devices_1"/>
+          <field name="operator">+</field>
+          <field name="amount">tax</field>
+          <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_use_non_food_personal_computing_devices_1_2">
+          <field name="code" ref="tax_code_8a"/>
+          <field name="tax" ref="sut_use_non_food_personal_computing_devices_1"/>
+          <field name="operator">-</field>
+          <field name="amount">tax</field>
+          <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_8a-sut_sales_single_non_food_and_prepared_food_1">
           <field name="code" ref="tax_code_8a"/>
           <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
@@ -337,6 +421,20 @@ this repository contains the full copyright notices and license terms. -->
           <field name="amount">base</field>
           <field name="type">credit</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_use_non_food_cellular_equipment_1">
+          <field name="code" ref="tax_code_6_credit_notes"/>
+          <field name="tax" ref="sut_use_non_food_cellular_equipment_1"/>
+          <field name="operator">-</field>
+          <field name="amount">base</field>
+          <field name="type">credit</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_use_non_food_personal_computing_devices_1">
+          <field name="code" ref="tax_code_6_credit_notes"/>
+          <field name="tax" ref="sut_use_non_food_personal_computing_devices_1"/>
+          <field name="operator">-</field>
+          <field name="amount">base</field>
+          <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_single_non_food_and_prepared_food">
           <field name="code" ref="tax_code_6_credit_notes"/>
           <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
@@ -415,6 +513,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.line.template" id="tax_code_4-sut_use_non_food_books_1">
           <field name="code" ref="tax_code_4"/>
           <field name="tax" ref="sut_use_non_food_books_1"/>
+          <field name="operator">+</field>
+          <field name="amount">base</field>
+          <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_4-sut_use_non_food_cellular_1">
+          <field name="code" ref="tax_code_4"/>
+          <field name="tax" ref="sut_use_non_food_cellular_equipment_1"/>
+          <field name="operator">+</field>
+          <field name="amount">base</field>
+          <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_4-sut_use_non_food_personal_computing_devices_1">
+          <field name="code" ref="tax_code_4"/>
+          <field name="tax" ref="sut_use_non_food_personal_computing_devices_1"/>
           <field name="operator">+</field>
           <field name="amount">base</field>
           <field name="type">invoice</field>
