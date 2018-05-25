@@ -6,9 +6,9 @@ tax.
 
 - Default taxes and codes support a single place of business.
   
-- To support multiple fixed places of business, add a custom subcode to the tax
-  chart for each outlet and the associated taxes and tax lines for that
-  location.
+- To support multiple fixed places of business, add corresponding tax groups
+  and subcodes to the tax chart for each outlet, with all the associated taxes
+  and tax lines that are needed for that location.
 
 - To support sales at multiple non-fixed places of business, contact the owner
   of this module to discuss the creating of an account_us_ut_extended module

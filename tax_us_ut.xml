@@ -5,29 +5,24 @@ this repository contains the full copyright notices and license terms. -->
     <data>
 
         <!-- Tax groups -->
-        <record model="account.tax.group" id="group_sut_sales_single">
+        <record model="account.tax.group" id="group_sut_sales">
             <field name="name">Utah sales taxes for sellers with a single fixed place of business</field>
             <field name="code">UT-S-Sales</field>
             <field name="kind">sale</field>
         </record>
-        <record model="account.tax.group" id="group_sut_sales_multiple">
-            <field name="name">Utah sales taxes for sellers with multiple fixed places of business</field>
-            <field name="code">UT-M-Sales</field>
-            <field name="kind">sale</field>
-        </record>
         <record model="account.tax.group" id="group_sut_use_inventory">
-            <field name="name">Utah use taxes on inventory consumed</field>
+            <field name="name">Utah use taxes on inventory consumed at a single fixed place of business</field>
             <field name="code">UT-S-Use inventory</field>
             <field name="kind">purchase</field>
         </record>
         <record model="account.tax.group" id="group_sut_use_non_food">
-            <field name="name">Utah use taxes on non-food purchases</field>
+            <field name="name">Utah use taxes on non-food purchases at a single fixed place of business</field>
             <field name="code">UT-S-Use purchases</field>
             <field name="kind">purchase</field>
         </record>
         <record model="account.tax.group" id="group_sut_use_food">
-            <field name="name">Utah use taxes on grocery food purchases</field>
-            <field name="code">UT-S-Grocery</field>
+            <field name="name">Utah use taxes on grocery food purchases at a single fixed place of business</field>
+            <field name="code">UT-S-Use grocery</field>
             <field name="kind">purchase</field>
         </record>
 
@@ -173,10 +168,10 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
-        <record model="account.tax.template" id="sut_sales_single_non_food_and_prepared_food">
-            <field name="name">Utah tax on sales of non-food and prepared food</field>
+        <record model="account.tax.template" id="sut_sales_non_food_and_prepared_food">
+            <field name="name">Tax on sales of non-food and prepared food</field>
             <field name="description">Sales tax 6.6%</field>
-            <field name="group" ref="group_sut_sales_single"/>
+            <field name="group" ref="group_sut_sales"/>
             <field name="rate" eval="Decimal('.066')"/>
             <field name="type">percentage</field>
             <field name="invoice_account" ref="2230_UT"/>
@@ -184,10 +179,10 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
-        <record model="account.tax.template" id="sut_sales_single_grocery_food">
-            <field name="name">Utah tax on sales of grocery food</field>
+        <record model="account.tax.template" id="sut_sales_grocery_food">
+            <field name="name">Tax on sales of grocery food</field>
             <field name="description">Food tax 3%</field>
-            <field name="group" ref="group_sut_sales_single"/>
+            <field name="group" ref="group_sut_sales"/>
             <field name="rate" eval="Decimal('.03')"/>
             <field name="type">percentage</field>
             <field name="invoice_account" ref="2230_UT"/>
@@ -196,9 +191,9 @@ this repository contains the full copyright notices and license terms. -->
         </record>
 
         <record model="account.tax.template" id="sut_sales_exempt">
-            <field name="name">Sales exempt from Utah sales tax</field>
+            <field name="name">Sales exempt from sales tax</field>
             <field name="description">Exempt</field>
-            <field name="group" ref="group_sut_sales_single"/>
+            <field name="group" ref="group_sut_sales"/>
             <field name="rate" eval="Decimal('0')"/>
             <field name="type">percentage</field>
             <field name="invoice_account" ref="2230_UT"/>
@@ -206,10 +201,10 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
-        <record model="account.tax.template" id="sut_sales_single_residential_fuels">
-            <field name="name">Utah tax on sales of residential fuels</field>
+        <record model="account.tax.template" id="sut_sales_residential_fuels">
+            <field name="name">Tax on sales of residential fuels</field>
             <field name="description">Fuel tax 2.7%</field>
-            <field name="group" ref="group_sut_sales_single"/>
+            <field name="group" ref="group_sut_sales"/>
             <field name="rate" eval="Decimal('.027')"/>
             <field name="type">percentage</field>
             <field name="invoice_account" ref="2230_UT"/>
@@ -244,16 +239,16 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="tax_code_11"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_10-sut_sales_single_residential_fuels_1">
+        <record model="account.tax.code.line.template" id="tax_code_10-sut_sales_residential_fuels_1">
           <field name="code" ref="tax_code_10"/>
-          <field name="tax" ref="sut_sales_single_residential_fuels"/>
+          <field name="tax" ref="sut_sales_residential_fuels"/>
           <field name="operator">+</field>
           <field name="amount">tax</field>
           <field name="type">invoice</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_10-sut_sales_single_residential_fuels_2">
+        <record model="account.tax.code.line.template" id="tax_code_10-sut_sales_residential_fuels_2">
           <field name="code" ref="tax_code_10"/>
-          <field name="tax" ref="sut_sales_single_residential_fuels"/>
+          <field name="tax" ref="sut_sales_residential_fuels"/>
           <field name="operator">-</field>
           <field name="amount">tax</field>
           <field name="type">credit</field>
@@ -329,16 +324,16 @@ this repository contains the full copyright notices and license terms. -->
           <field name="amount">tax</field>
           <field name="type">credit</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_8a-sut_sales_single_non_food_and_prepared_food_1">
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_sales_non_food_and_prepared_food_1">
           <field name="code" ref="tax_code_8a"/>
-          <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
+          <field name="tax" ref="sut_sales_non_food_and_prepared_food"/>
           <field name="operator">+</field>
           <field name="amount">tax</field>
           <field name="type">invoice</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_8a-sut_sales_single_non_food_and_prepared_food_2">
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_sales_non_food_and_prepared_food_2">
           <field name="code" ref="tax_code_8a"/>
-          <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
+          <field name="tax" ref="sut_sales_non_food_and_prepared_food"/>
           <field name="operator">-</field>
           <field name="amount">tax</field>
           <field name="type">credit</field>
@@ -365,16 +360,16 @@ this repository contains the full copyright notices and license terms. -->
           <field name="amount">tax</field>
           <field name="type">credit</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_8b-sut_sales_single_grocery_food_1">
+        <record model="account.tax.code.line.template" id="tax_code_8b-sut_sales_grocery_food_1">
           <field name="code" ref="tax_code_8b"/>
-          <field name="tax" ref="sut_sales_single_grocery_food"/>
+          <field name="tax" ref="sut_sales_grocery_food"/>
           <field name="operator">+</field>
           <field name="amount">tax</field>
           <field name="type">invoice</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_8b-sut_sales_single_grocery_food_2">
+        <record model="account.tax.code.line.template" id="tax_code_8b-sut_sales_grocery_food_2">
           <field name="code" ref="tax_code_8b"/>
-          <field name="tax" ref="sut_sales_single_grocery_food"/>
+          <field name="tax" ref="sut_sales_grocery_food"/>
           <field name="operator">-</field>
           <field name="amount">tax</field>
           <field name="type">credit</field>
@@ -435,23 +430,23 @@ this repository contains the full copyright notices and license terms. -->
           <field name="amount">base</field>
           <field name="type">credit</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_single_non_food_and_prepared_food">
+        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_non_food_and_prepared_food">
           <field name="code" ref="tax_code_6_credit_notes"/>
-          <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
+          <field name="tax" ref="sut_sales_non_food_and_prepared_food"/>
           <field name="operator">-</field>
           <field name="amount">base</field>
           <field name="type">credit</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_single_grocery_food">
+        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_grocery_food">
           <field name="code" ref="tax_code_6_credit_notes"/>
-          <field name="tax" ref="sut_sales_single_grocery_food"/>
+          <field name="tax" ref="sut_sales_grocery_food"/>
           <field name="operator">-</field>
           <field name="amount">base</field>
           <field name="type">credit</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_single_residential_fuels">
+        <record model="account.tax.code.line.template" id="tax_code_6_credit_notes-sut_sales_residential_fuels">
           <field name="code" ref="tax_code_6_credit_notes"/>
-          <field name="tax" ref="sut_sales_single_residential_fuels"/>
+          <field name="tax" ref="sut_sales_residential_fuels"/>
           <field name="operator">-</field>
           <field name="amount">base</field>
           <field name="type">credit</field>
@@ -568,9 +563,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="tax_code_1"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1_non_food_and_prepared_food-sut_sales_single_non_food_and_prepared_food">
+        <record model="account.tax.code.line.template" id="tax_code_1_non_food_and_prepared_food-sut_sales_non_food_and_prepared_food">
           <field name="code" ref="tax_code_1_non_food_and_prepared_food"/>
-          <field name="tax" ref="sut_sales_single_non_food_and_prepared_food"/>
+          <field name="tax" ref="sut_sales_non_food_and_prepared_food"/>
           <field name="operator">+</field>
           <field name="amount">base</field>
           <field name="type">invoice</field>
@@ -582,9 +577,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="tax_code_1"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1_grocery_food-sut_sales_single_grocery_food">
+        <record model="account.tax.code.line.template" id="tax_code_1_grocery_food-sut_sales_grocery_food">
           <field name="code" ref="tax_code_1_grocery_food"/>
-          <field name="tax" ref="sut_sales_single_grocery_food"/>
+          <field name="tax" ref="sut_sales_grocery_food"/>
           <field name="operator">+</field>
           <field name="amount">base</field>
           <field name="type">invoice</field>
@@ -596,9 +591,9 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="tax_code_1"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1_residential_fuels-sut_sales_single_residential_fuels">
+        <record model="account.tax.code.line.template" id="tax_code_1_residential_fuels-sut_sales_residential_fuels">
           <field name="code" ref="tax_code_1_residential_fuels"/>
-          <field name="tax" ref="sut_sales_single_residential_fuels"/>
+          <field name="tax" ref="sut_sales_residential_fuels"/>
           <field name="operator">+</field>
           <field name="amount">base</field>
           <field name="type">invoice</field>
