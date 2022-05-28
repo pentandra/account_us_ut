@@ -5,40 +5,30 @@
             <field name="name">Deferred state and local tax asset—Utah</field>
             <field name="code">1931-UT</field>
             <field name="type" ref="account_us.deferred_tax_assets"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="account_us.1931"/>
         </record>
         <record model="account.account.template" id="2230_UT">
             <field name="name">Sales tax collected—Utah</field>
             <field name="code">2230-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="account_us.2230"/>
         </record>
         <record model="account.account.template" id="2231_UT">
             <field name="name">Accrued use tax—Utah</field>
             <field name="code">2231-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="account_us.2231"/>
         </record>
         <record model="account.account.template" id="22331_UT">
             <field name="name">Accrued state and local income and franchise tax—Utah</field>
             <field name="code">22331-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="account_us.22331"/>
         </record>
         <record model="account.account.template" id="22341_UT">
             <field name="name">Deferred state and local income tax liability—Utah</field>
             <field name="code">22341-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="deferral" eval="True"/>
-            <field name="kind">other</field>
             <field name="parent" ref="account_us.22341"/>
         </record>
     </data>
