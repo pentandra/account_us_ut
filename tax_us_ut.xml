@@ -7,23 +7,23 @@ this repository contains the full copyright notices and license terms. -->
         <!-- Tax groups -->
 
         <record model="account.tax.group" id="group_sut_sales">
-            <field name="name">Utah sales taxes for sellers with a single fixed place of business</field>
-            <field name="code">UT-S-Sales</field>
+            <field name="name">Utah taxes for sales of goods or services</field>
+            <field name="code">UT-Sales</field>
             <field name="kind">sale</field>
         </record>
         <record model="account.tax.group" id="group_sut_use_inventory">
-            <field name="name">Utah use taxes on inventory consumed at a single fixed place of business</field>
-            <field name="code">UT-S-Use inventory</field>
+            <field name="name">Utah use taxes on inventory consumed</field>
+            <field name="code">UT-Use inventory</field>
             <field name="kind">purchase</field>
         </record>
         <record model="account.tax.group" id="group_sut_use_non_food">
-            <field name="name">Utah use taxes on non-food purchases at a single fixed place of business</field>
-            <field name="code">UT-S-Use purchases</field>
+            <field name="name">Utah use taxes on non-food purchases</field>
+            <field name="code">UT-Use purchases</field>
             <field name="kind">purchase</field>
         </record>
         <record model="account.tax.group" id="group_sut_use_food">
-            <field name="name">Utah use taxes on grocery food purchases at a single fixed place of business</field>
-            <field name="code">UT-S-Use grocery</field>
+            <field name="name">Utah use taxes on grocery food purchases</field>
+            <field name="code">UT-Use grocery</field>
             <field name="kind">purchase</field>
         </record>
 
