@@ -491,35 +491,36 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
-        <record model="account.tax.code.template" id="tax_code_1-03_000">
-            <field name="name">Total sales—Cache County</field>
+        <record model="account.tax.code.template" id="tax_code_1-sales">
+            <field name="name">Sales of non-food and prepared-food goods and services</field>
+            <field name="code">8a—base</field>
+            <field name="parent" ref="tax_code_1"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
+        <record model="account.tax.code.template" id="tax_code_1-sales-03_000">
+            <field name="name">Total sales of non-food and prepared-food goods and services—Cache County</field>
             <field name="code">03-000</field>
             <field name="description">Cache county total sales</field>
-            <field name="parent" ref="tax_code_1"/>
+            <field name="parent" ref="tax_code_1-sales"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.template" id="tax_code_1-03_038">
-            <field name="name">Total sales—Logan</field>
+        <record model="account.tax.code.template" id="tax_code_1-sales-03_038">
+            <field name="name">Total sales of non-food and prepared-food goods and services—Logan</field>
             <field name="code">03-038</field>
             <field name="description">Logan total sales</field>
-            <field name="parent" ref="tax_code_1"/>
+            <field name="parent" ref="tax_code_1-sales"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.template" id="tax_code_1-03_038-sales">
-            <field name="name">Sales of non-food and prepared food goods and services</field>
-            <field name="code">8a—base</field>
-            <field name="parent" ref="tax_code_1-03_038"/>
-            <field name="account" ref="account_us.root"/>
-        </record>
-        <record model="account.tax.code.line.template" id="tax_code_1-sut_03_038_sales-invoice">
-            <field name="code" ref="tax_code_1-03_038-sales"/>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales-invoice">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
             <field name="tax" ref="sut_03_038_sales"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1-sut_03_038_prepared_food_sales-invoice">
-            <field name="code" ref="tax_code_1-03_038-sales"/>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales-invoice">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
             <field name="tax" ref="sut_03_038_prepared_food_sales"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
@@ -532,7 +533,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="parent" ref="tax_code_1"/>
             <field name="account" ref="account_us.root"/>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1-sut_grocery_food_sales-invoice">
+        <record model="account.tax.code.line.template" id="tax_code_1-grocery_food_sales-sut_grocery_food_sales-invoice">
             <field name="code" ref="tax_code_1-grocery_food_sales"/>
             <field name="tax" ref="sut_grocery_food_sales"/>
             <field name="operator">+</field>
