@@ -519,7 +519,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="type">invoice</field>
         </record>
         <record model="account.tax.code.line.template" id="tax_code_1-sut_03_038_prepared_food_sales-invoice">
-            <field name="code" ref="tax_code_1-03_038-non_food_and_prepared_food_sales"/>
+            <field name="code" ref="tax_code_1-03_038-sales"/>
             <field name="tax" ref="sut_03_038_prepared_food_sales"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
