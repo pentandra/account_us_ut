@@ -1,11 +1,179 @@
 <?xml version='1.0' encoding='utf-8'?>
 <tryton>
     <data>
+        <record model="account.account.template" id="131100_UT">
+            <field name="name">Utah wages expense—direct production</field>
+            <field name="code">131100-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131100"/>
+        </record>
+        <record model="account.account.template" id="131101_UT">
+            <field name="name">Utah bonuses—direct production</field>
+            <field name="code">131101-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131101"/>
+        </record>
+        <record model="account.account.template" id="131102_UT">
+            <field name="name">Utah incentive pay—direct production</field>
+            <field name="code">131102-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131102"/>
+        </record>
+        <record model="account.account.template" id="131103_UT">
+            <field name="name">Utah severance pay—direct production</field>
+            <field name="code">131103-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131103"/>
+        </record>
+        <record model="account.account.template" id="131110_UT">
+            <field name="name">Utah employer FICA—direct production</field>
+            <field name="code">131110-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131110"/>
+        </record>
+        <record model="account.account.template" id="131111_UT">
+            <field name="name">Utah employer medicare-direct production</field>
+            <field name="code">131111-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131111"/>
+        </record>
+        <record model="account.account.template" id="131112_UT">
+            <field name="name">Workers’ compensation insurance for Utah employees-direct production</field>
+            <field name="code">131112-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131112"/>
+        </record>
+        <record model="account.account.template" id="131113_UT">
+            <field name="name">Utah unemployment insurance—direct production</field>
+            <field name="code">131113-UT</field>
+            <field name="type" ref="account_us.direct_labor_costs"/>
+            <field name="parent" ref="account_us.131113"/>
+        </record>
+        <record model="account.account.template" id="138100_UT">
+            <field name="name">Utah salaries expense—production supervisors</field>
+            <field name="code">138100-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138100"/>
+        </record>
+        <record model="account.account.template" id="138101_UT">
+            <field name="name">Utah indirect production wages</field>
+            <field name="code">138101-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138101"/>
+        </record>
+        <record model="account.account.template" id="138102_UT">
+            <field name="name">Utah bonuses—production overhead</field>
+            <field name="code">138102-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138102"/>
+        </record>
+        <record model="account.account.template" id="138103_UT">
+            <field name="name">Utah incentive pay—production overhead</field>
+            <field name="code">138103-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138103"/>
+        </record>
+        <record model="account.account.template" id="138104_UT">
+            <field name="name">Utah severance pay—production overhead</field>
+            <field name="code">138104-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138104"/>
+        </record>
+        <record model="account.account.template" id="138110_UT">
+            <field name="name">Utah employer FICA—production overhead</field>
+            <field name="code">138110-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138110"/>
+        </record>
+        <record model="account.account.template" id="138111_UT">
+            <field name="name">Utah employer medicare—production overhead</field>
+            <field name="code">138111-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138111"/>
+        </record>
+        <record model="account.account.template" id="138112_UT">
+            <field name="name">Workers’ compensation insurance for Utah employees—production overhead</field>
+            <field name="code">138112-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.138112"/>
+        </record>
+        <record model="account.account.template" id="138113_UT">
+            <field name="name">Utah unemployment insurance—production overhead</field>
+            <field name="code">138113-UT</field>
+            <field name="type" ref="account_us.unallocated_overhead"/>
+            <field name="parent" ref="account_us.13811"/>
+        </record>
         <record model="account.account.template" id="1931_UT">
             <field name="name">Deferred state and local tax asset—Utah</field>
             <field name="code">1931-UT</field>
             <field name="type" ref="account_us.deferred_tax_assets"/>
             <field name="parent" ref="account_us.1931"/>
+        </record>
+        <record model="account.account.template" id="222100_UT">
+            <field name="name">Employee federal income tax withheld—Utah</field>
+            <field name="code">222100-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.222100"/>
+        </record>
+        <record model="account.account.template" id="222101_UT">
+            <field name="name">Employee state income tax withheld—Utah</field>
+            <field name="code">222101-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.222101"/>
+        </record>
+        <record model="account.account.template" id="222102_UT">
+            <field name="name">Employee local income tax withheld—Utah</field>
+            <field name="code">222102-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.222102"/>
+        </record>
+        <record model="account.account.template" id="22211_UT">
+            <field name="name">Employee FICA withheld—Utah</field>
+            <field name="code">22211-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.22211"/>
+        </record>
+        <record model="account.account.template" id="22212_UT">
+            <field name="name">Employee Medicare withheld—Utah</field>
+            <field name="code">22212-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.22212"/>
+        </record>
+        <record model="account.account.template" id="22213_UT">
+            <field name="name">Employee garnishments withheld—Utah</field>
+            <field name="code">22213-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="parent" ref="account_us.22213"/>
+        </record>
+        <record model="account.account.template" id="22220_UT">
+            <field name="name">Employer FICA contribution—Utah</field>
+            <field name="code">22220-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22220"/>
+        </record>
+        <record model="account.account.template" id="22221_UT">
+            <field name="name">Employer Medicare contribution—Utah</field>
+            <field name="code">22221-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22221"/>
+        </record>
+        <record model="account.account.template" id="22222_UT">
+            <field name="name">Employer federal unemployment tax—Utah</field>
+            <field name="code">22222-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22222"/>
+        </record>
+        <record model="account.account.template" id="22223_UT">
+            <field name="name">Employer state unemployment tax—Utah</field>
+            <field name="code">22223-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22223"/>
+        </record>
+        <record model="account.account.template" id="22224_UT">
+            <field name="name">Employer workers’ compensation insurance—Utah</field>
+            <field name="code">22224-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22224"/>
         </record>
         <record model="account.account.template" id="2230_UT">
             <field name="name">Sales tax collected—Utah</field>
@@ -30,6 +198,78 @@
             <field name="code">22341-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
             <field name="parent" ref="account_us.22341"/>
+        </record>
+        <record model="account.account.template" id="51000_UT">
+            <field name="name">Utah salaries expense—officers and directors</field>
+            <field name="code">51000-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.51000"/>
+        </record>
+        <record model="account.account.template" id="51001_UT">
+            <field name="name">Utah salaries expense—other</field>
+            <field name="code">51001-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.51001"/>
+        </record>
+        <record model="account.account.template" id="5101_UT">
+            <field name="name">Utah wages expense</field>
+            <field name="code">5101-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5101"/>
+        </record>
+        <record model="account.account.template" id="51020_UT">
+            <field name="name">Sales commissions for Utah employees</field>
+            <field name="code">51020-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.51020"/>
+        </record>
+        <record model="account.account.template" id="51021_UT">
+            <field name="name">Sales commission adjustments for Utah employees</field>
+            <field name="code">51021-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.51021"/>
+        </record>
+        <record model="account.account.template" id="5103_UT">
+            <field name="name">Utah bonuses</field>
+            <field name="code">5103-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5103"/>
+        </record>
+        <record model="account.account.template" id="5104_UT">
+            <field name="name">Utah incentive pay</field>
+            <field name="code">5104-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5104"/>
+        </record>
+        <record model="account.account.template" id="5105_UT">
+            <field name="name">Utah severance pay</field>
+            <field name="code">5105-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.510"/>
+        </record>
+        <record model="account.account.template" id="5110_UT">
+            <field name="name">Utah employer FICA</field>
+            <field name="code">5110-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5110"/>
+        </record>
+        <record model="account.account.template" id="5111_UT">
+            <field name="name">Utah employer medicare</field>
+            <field name="code">5111-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5111"/>
+        </record>
+        <record model="account.account.template" id="5112_UT">
+            <field name="name">Workers’ compensation insurance for Utah employees</field>
+            <field name="code">5112_UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.5112"/>
+        </record>
+        <record model="account.account.template" id="5113_UT">
+            <field name="name">Utah unemployment insurance</field>
+            <field name="code">5113-UT</field>
+            <field name="type" ref="account_us.personnel_costs"/>
+            <field name="parent" ref="account_us.511"/>
         </record>
     </data>
 </tryton>
