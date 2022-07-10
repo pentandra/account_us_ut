@@ -1,0 +1,26 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tryton>
+    <data depends="party">
+        <record model="party.party" id="utah_state_tax_commission">
+            <field name="name">Utah State Tax Commission</field>
+            <field name="phone">801-297-2200</field>
+            <field name="phone">800-662-4335</field>
+            <field name="fax">801-297-7699</field>
+            <field name="email">taxmaster@utah.gov</field>
+            <field name="email">tapsupport@utah.gov</field>
+            <field name="website">https://tax.utah.gov</field>
+        </record>
+        <record model="party.address" id="utah_state_tax_commission_address_regular">
+            <field name="street">210 North 1950 West</field>
+            <field name="city">Salt Lake City</field>
+            <field name="postal_code">84134</field>
+            <field name="party" ref="utah_state_tax_commission"/>
+        </record>
+        <record model="party.address" id="utah_state_tax_commission_address_express">
+            <field name="street">210 North 1950 West</field>
+            <field name="city">Salt Lake City</field>
+            <field name="postal_code">84116</field>
+            <field name="party" ref="utah_state_tax_commission"/>
+        </record>
+    </data>
+</tryton>
