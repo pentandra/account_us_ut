@@ -13,12 +13,14 @@
             <field name="city">Salt Lake City</field>
             <field name="postal_code">84134</field>
             <field name="party" ref="utah_state_tax_commission"/>
+            <field name="sequence" eval="10"/>
         </record>
         <record model="party.address" id="utah_state_tax_commission_address_express">
             <field name="street">210 North 1950 West</field>
             <field name="city">Salt Lake City</field>
             <field name="postal_code">84116</field>
             <field name="party" ref="utah_state_tax_commission"/>
+            <field name="sequence" eval="20"/>
         </record>
     </data>
 </tryton>
