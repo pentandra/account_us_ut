@@ -275,7 +275,7 @@
         </record>
         <record model="account.account.template" id="5112_UT">
             <field name="name">Workers’ compensation insurance for Utah employees</field>
-            <field name="code">5112_UT</field>
+            <field name="code">5112-UT</field>
             <field name="type" ref="account_us.personnel_costs"/>
             <field name="parent" ref="account_us.5112"/>
         </record>
