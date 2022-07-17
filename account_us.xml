@@ -109,6 +109,27 @@
             <field name="type" ref="account_us.deferred_tax_assets"/>
             <field name="parent" ref="account_us.1931"/>
         </record>
+        <record model="account.account.template" id="22200_UT">
+            <field name="name">Accrued salaries—Utah</field>
+            <field name="code">22200-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="parent" ref="account_us.22200"/>
+            <field name="party_required" eval="True"/>
+        </record>
+        <record model="account.account.template" id="22201_UT">
+            <field name="name">Accrued wages—Utah</field>
+            <field name="code">22201-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="parent" ref="account_us.22201"/>
+            <field name="party_required" eval="True"/>
+        </record>
+        <record model="account.account.template" id="22202_UT">
+            <field name="name">Accrued commissions—Utah</field>
+            <field name="code">22202-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="parent" ref="account_us.22202"/>
+            <field name="party_required" eval="True"/>
+        </record>
         <record model="account.account.template" id="222100_UT">
             <field name="name">Employee federal income tax withheld—Utah</field>
             <field name="code">222100-UT</field>
