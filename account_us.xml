@@ -7,31 +7,132 @@
             <field name="type" ref="account_us.deferred_tax_assets"/>
             <field name="parent" ref="account_us.1931"/>
         </record>
+        <record model="account.account.template" id="22200_UT">
+            <field name="name">Accrued salaries—Utah</field>
+            <field name="code">22200-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="account_us.22200"/>
+        </record>
+        <record model="account.account.template" id="22201_UT">
+            <field name="name">Accrued wages—Utah</field>
+            <field name="code">22201-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="account_us.22201"/>
+        </record>
+        <record model="account.account.template" id="22202_UT">
+            <field name="name">Accrued commissions—Utah</field>
+            <field name="code">22202-UT</field>
+            <field name="type" ref="account_us.accrued_payroll"/>
+            <field name="party_required" eval="True"/>
+            <field name="reconcile" eval="True"/>
+            <field name="parent" ref="account_us.22202"/>
+        </record>
+        <record model="account.account.template" id="222100_UT">
+            <field name="name">Employee federal income tax withheld—Utah</field>
+            <field name="code">222100-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.222100"/>
+        </record>
+        <record model="account.account.template" id="222101_UT">
+            <field name="name">Employee state income tax withheld—Utah</field>
+            <field name="code">222101-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.222101"/>
+        </record>
+        <record model="account.account.template" id="222102_UT">
+            <field name="name">Employee local income tax withheld—Utah</field>
+            <field name="code">222102-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.222102"/>
+        </record>
+        <record model="account.account.template" id="22211_UT">
+            <field name="name">Employee FICA withheld—Utah</field>
+            <field name="code">22211-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22211"/>
+        </record>
+        <record model="account.account.template" id="22212_UT">
+            <field name="name">Employee Medicare withheld—Utah</field>
+            <field name="code">22212-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22212"/>
+        </record>
+        <record model="account.account.template" id="22213_UT">
+            <field name="name">Employee garnishments withheld—Utah</field>
+            <field name="code">22213-UT</field>
+            <field name="type" ref="account_us.payroll_withholdings"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22213"/>
+        </record>
+        <record model="account.account.template" id="22220_UT">
+            <field name="name">Employer FICA contribution—Utah</field>
+            <field name="code">22220-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22220"/>
+        </record>
+        <record model="account.account.template" id="22221_UT">
+            <field name="name">Employer Medicare contribution—Utah</field>
+            <field name="code">22221-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22221"/>
+        </record>
+        <record model="account.account.template" id="22222_UT">
+            <field name="name">Employer federal unemployment tax—Utah</field>
+            <field name="code">22222-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22222"/>
+        </record>
+        <record model="account.account.template" id="22223_UT">
+            <field name="name">Employer state unemployment tax—Utah</field>
+            <field name="code">22223-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22223"/>
+        </record>
+        <record model="account.account.template" id="22224_UT">
+            <field name="name">Employer workers’ compensation insurance—Utah</field>
+            <field name="code">22224-UT</field>
+            <field name="type" ref="account_us.accrued_payroll_taxes"/>
+            <field name="parent" ref="account_us.22224"/>
+        </record>
         <record model="account.account.template" id="2230_UT">
             <field name="name">Sales tax collected—Utah</field>
             <field name="code">2230-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="parent" ref="account_us.2230"/>
             <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.2230"/>
         </record>
         <record model="account.account.template" id="2231_UT">
             <field name="name">Accrued use tax—Utah</field>
             <field name="code">2231-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="parent" ref="account_us.2231"/>
             <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.2231"/>
         </record>
         <record model="account.account.template" id="22331_UT">
             <field name="name">Accrued state and local income and franchise tax—Utah</field>
             <field name="code">22331-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="parent" ref="account_us.22331"/>
             <field name="party_required" eval="True"/>
+            <field name="parent" ref="account_us.22331"/>
         </record>
         <record model="account.account.template" id="22341_UT">
             <field name="name">Deferred state and local income tax liability—Utah</field>
             <field name="code">22341-UT</field>
             <field name="type" ref="account_us.tax_liabilities"/>
+            <field name="party_required" eval="True"/>
             <field name="parent" ref="account_us.22341"/>
         </record>
     </data>
