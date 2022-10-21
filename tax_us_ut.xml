@@ -571,7 +571,7 @@ this repository contains the full copyright notices and license terms. -->
         <!-- Tax rules -->
 
         <record model="account.tax.rule.template" id="tax_rule_exemption_entity">
-            <field name="name">Sales to entities exempt from Utah sales tax</field>
+            <field name="name">Retail sales to entities exempt from Utah sales tax</field>
             <field name="kind">sale</field>
             <field name="account" ref="account_us.root"/>
         </record>
@@ -579,6 +579,18 @@ this repository contains the full copyright notices and license terms. -->
             <field name="rule" ref="tax_rule_exemption_entity"/>
             <field name="group" ref="group_sut_sales"/>
             <field name="tax" ref="sut_exempt_sales"/>
+        </record>
+
+        <record model="account.tax.rule.template" id="tax_rule_exemption_use">
+            <field name="name">Exemption to sales tax because of buyer's use of the product</field>
+            <field name="kind">sale</field>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
+        <record model="account.tax.rule.template" id="tax_rule_exemption_product">
+            <field name="name">Products exempt from sales tax</field>
+            <field name="kind">sale</field>
+            <field name="account" ref="account_us.root"/>
         </record>
     </data>
 </tryton>
