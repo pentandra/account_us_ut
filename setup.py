@@ -84,7 +84,7 @@ setup(name=name,
     url='https://github.com/pentandra/account_us_ut',
     download_url=download_url,
     keywords='tryton account chart us gaap english',
-    package_dir={'trytond.modules.account_us': '.'},
+    package_dir={'trytond.modules.account_us_ut': '.'},
     packages=(
         ['trytond.modules.account_us_ut']
         + ['trytond.modules.account_us_ut.%s' % p for p in find_packages()]
