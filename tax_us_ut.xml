@@ -45,7 +45,7 @@ this repository contains the full copyright notices and license terms. -->
         <!-- Tax templates -->
 
         <record model="account.tax.template" id="sut_03_000_sales">
-            <field name="name">Tax on sales of normal goods and services—Cache County</field>
+            <field name="name">Tax on sales of normal goods and services—Cache County, Utah</field>
             <field name="description">Cache county sales tax</field>
             <field name="group" ref="group_sut_sales"/>
             <field name="type">none</field>
