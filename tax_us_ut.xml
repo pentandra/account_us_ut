@@ -130,6 +130,49 @@ this repository contains the full copyright notices and license terms. -->
             <field name="account" ref="account_us.root"/>
         </record>
 
+        <record model="account.tax.template" id="sut_03_056_sales">
+            <field name="name">Tax on sales of normal goods and services—Providence, Utah</field>
+            <field name="description">Providence sales tax</field>
+            <field name="group" ref="group_sut_sales"/>
+            <field name="type">none</field>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
+        <record model="account.tax.template" id="sut_03_056_sales_7">
+            <field name="name">Providence sales tax 7%</field>
+            <field name="description">Providence sales tax 7%</field>
+            <field name="parent" ref="sut_03_056_sales"/>
+            <field name="start_date" eval="datetime.date(2019, 4, 1)"/>
+            <field name="rate" eval="Decimal('.07')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2230_UT"/>
+            <field name="credit_note_account" ref="2230_UT"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_03_056_sales_6_85">
+            <field name="name">Providence sales tax 6.85%</field>
+            <field name="description">Providence sales tax 6.85%</field>
+            <field name="parent" ref="sut_03_056_sales"/>
+            <field name="start_date" eval="datetime.date(2018, 10, 1)"/>
+            <field name="end_date" eval="datetime.date(2019, 3, 31)"/>
+            <field name="rate" eval="Decimal('.0685')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2230_UT"/>
+            <field name="credit_note_account" ref="2230_UT"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.template" id="sut_03_056_sales_6_6">
+            <field name="name">Providence sales tax 6.6%</field>
+            <field name="description">Providence sales tax 6.6%</field>
+            <field name="parent" ref="sut_03_056_sales"/>
+            <field name="end_date" eval="datetime.date(2018, 9, 30)"/>
+            <field name="rate" eval="Decimal('.066')"/>
+            <field name="type">percentage</field>
+            <field name="invoice_account" ref="2230_UT"/>
+            <field name="credit_note_account" ref="2230_UT"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+
         <record model="account.tax.template" id="sut_03_038_use">
             <field name="name">Tax on goods purchased tax-free and used by the company—Logan, Utah</field>
             <field name="description">Logan use tax</field>
@@ -356,6 +399,27 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">tax</field>
             <field name="type">credit</field>
         </record>
+        <record model="account.tax.code.template" id="tax_code_8a-03_056">
+            <field name="name">Taxes on non-food and prepared food sales—Providence</field>
+            <field name="code">03-056</field>
+            <field name="description">Providence non-food and prepared-food sales tax</field>
+            <field name="parent" ref="tax_code_8a"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_03_056_sales-invoice">
+            <field name="code" ref="tax_code_8a-03_056"/>
+            <field name="tax" ref="sut_03_056_sales"/>
+            <field name="operator">+</field>
+            <field name="amount">tax</field>
+            <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_8a-sut_03_056_sales-credit">
+            <field name="code" ref="tax_code_8a-03_056"/>
+            <field name="tax" ref="sut_03_056_sales"/>
+            <field name="operator">-</field>
+            <field name="amount">tax</field>
+            <field name="type">credit</field>
+        </record>
 
         <record model="account.tax.code.template" id="tax_code_8b">
             <field name="name">Taxes on grocery food sales</field>
@@ -522,6 +586,20 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales-invoice">
             <field name="code" ref="tax_code_1-sales-03_038"/>
             <field name="tax" ref="sut_03_038_prepared_food_sales"/>
+            <field name="operator">+</field>
+            <field name="amount">base</field>
+            <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.template" id="tax_code_1-sales-03_056">
+            <field name="name">Total sales of non-food and prepared-food goods and services—Providence</field>
+            <field name="code">03-056</field>
+            <field name="description">Providence total sales</field>
+            <field name="parent" ref="tax_code_1-sales"/>
+            <field name="account" ref="account_us.root"/>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales-invoice">
+            <field name="code" ref="tax_code_1-sales-03_056"/>
+            <field name="tax" ref="sut_03_056_sales"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
