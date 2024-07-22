@@ -178,6 +178,7 @@ this repository contains the full copyright notices and license terms. -->
             <field name="description">Logan use tax</field>
             <field name="group" ref="group_sut_use"/>
             <field name="type">none</field>
+            <field name="update_unit_price" eval="True"/>
             <field name="account" ref="account_us.root"/>
         </record>
 
