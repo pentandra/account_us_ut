@@ -608,6 +608,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_4-sut_03_038_use_7-credit">
+            <field name="code" ref="tax_code_4-03_038"/>
+            <field name="tax" ref="sut_03_038_use_7"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_4-sut_03_038_use_6_85-invoice">
             <field name="code" ref="tax_code_4-03_038"/>
             <field name="tax" ref="sut_03_038_use_6_85"/>
@@ -615,12 +622,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_4-sut_03_038_use_6_85-credit">
+            <field name="code" ref="tax_code_4-03_038"/>
+            <field name="tax" ref="sut_03_038_use_6_85"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_4-sut_03_038_use_6_6-invoice">
             <field name="code" ref="tax_code_4-03_038"/>
             <field name="tax" ref="sut_03_038_use_6_6"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_4-sut_03_038_use_6_6-credit">
+            <field name="code" ref="tax_code_4-03_038"/>
+            <field name="tax" ref="sut_03_038_use_6_6"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
 
         <record model="account.tax.code.template" id="tax_code_3">
@@ -640,9 +661,16 @@ this repository contains the full copyright notices and license terms. -->
         <record model="account.tax.code.line.template" id="tax_code_2-sut_exempt_sales-invoice">
             <field name="code" ref="tax_code_2"/>
             <field name="tax" ref="sut_exempt_sales"/>
-            <field name="operator">-</field>
+            <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_2-sut_exempt_sales-credit">
+            <field name="code" ref="tax_code_2"/>
+            <field name="tax" ref="sut_exempt_sales"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
 
         <record model="account.tax.code.template" id="tax_code_1">
@@ -681,12 +709,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales_7-credit">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_sales_7"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales_6_85-invoice">
             <field name="code" ref="tax_code_1-sales-03_038"/>
             <field name="tax" ref="sut_03_038_sales_6_85"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales_6_85-credit">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_sales_6_85"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
         <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales_6_6-invoice">
             <field name="code" ref="tax_code_1-sales-03_038"/>
@@ -695,12 +737,54 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
-        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales-invoice">
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_sales_6_6-credit">
             <field name="code" ref="tax_code_1-sales-03_038"/>
-            <field name="tax" ref="sut_03_038_prepared_food_sales"/>
+            <field name="tax" ref="sut_03_038_sales_6_6"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_8-invoice">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_8"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_8-credit">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_8"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_7_85-invoice">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_7_85"/>
+            <field name="operator">+</field>
+            <field name="amount">base</field>
+            <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_7_85-credit">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_7_85"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_7_6-invoice">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_7_6"/>
+            <field name="operator">+</field>
+            <field name="amount">base</field>
+            <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_038_prepared_food_sales_7_6-credit">
+            <field name="code" ref="tax_code_1-sales-03_038"/>
+            <field name="tax" ref="sut_03_038_prepared_food_sales_7_6"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
         <record model="account.tax.code.template" id="tax_code_1-sales-03_056">
             <field name="name">Total sales of non-food and prepared-food goods and services—Providence</field>
@@ -716,6 +800,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales_7-credit">
+            <field name="code" ref="tax_code_1-sales-03_056"/>
+            <field name="tax" ref="sut_03_056_sales_7"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales_6_85-invoice">
             <field name="code" ref="tax_code_1-sales-03_056"/>
             <field name="tax" ref="sut_03_056_sales_6_85"/>
@@ -723,12 +814,26 @@ this repository contains the full copyright notices and license terms. -->
             <field name="amount">base</field>
             <field name="type">invoice</field>
         </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales_6_85-credit">
+            <field name="code" ref="tax_code_1-sales-03_056"/>
+            <field name="tax" ref="sut_03_056_sales_6_85"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
+        </record>
         <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales_6_6-invoice">
             <field name="code" ref="tax_code_1-sales-03_056"/>
             <field name="tax" ref="sut_03_056_sales_6_6"/>
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-sales-sut_03_056_sales_6_6-credit">
+            <field name="code" ref="tax_code_1-sales-03_056"/>
+            <field name="tax" ref="sut_03_056_sales_6_6"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
 
         <record model="account.tax.code.template" id="tax_code_1-grocery_food_sales">
@@ -743,6 +848,13 @@ this repository contains the full copyright notices and license terms. -->
             <field name="operator">+</field>
             <field name="amount">base</field>
             <field name="type">invoice</field>
+        </record>
+        <record model="account.tax.code.line.template" id="tax_code_1-grocery_food_sales-sut_grocery_food_sales_3-credit">
+            <field name="code" ref="tax_code_1-grocery_food_sales"/>
+            <field name="tax" ref="sut_grocery_food_sales_3"/>
+            <field name="operator">-</field>
+            <field name="amount">base</field>
+            <field name="type">credit</field>
         </record>
 
         <record model="account.tax.code.template" id="tax_code_1_residential_fuels">
