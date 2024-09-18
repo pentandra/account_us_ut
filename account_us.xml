@@ -107,13 +107,6 @@
             <field name="type" ref="account_us.accrued_payroll_taxes"/>
             <field name="parent" ref="account_us.22224"/>
         </record>
-        <record model="account.account.template" id="2230_UT">
-            <field name="name">Sales tax collected—Utah</field>
-            <field name="code">2230-UT</field>
-            <field name="type" ref="account_us.tax_liabilities"/>
-            <field name="party_required" eval="True"/>
-            <field name="parent" ref="account_us.2230"/>
-        </record>
         <record model="account.account.template" id="2231_UT">
             <field name="name">Accrued use tax—Utah</field>
             <field name="code">2231-UT</field>
